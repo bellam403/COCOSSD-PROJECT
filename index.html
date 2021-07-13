@@ -2,8 +2,6 @@
     <head>
         <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7HbVFcOvMNRm_fOKC2iUKh1-vTVdd2q0SNA&usqp=CAU" />
         <title>OBJECT DETECTION</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="main.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -18,14 +16,37 @@
     </h1>
 
     <div>
-        <button><a>ELECTRONICS</a></button>
-        <button><a>BEDROOM</a></button>
-        <button><a>LIVING ROOM</a></button>
-        <button><a>COLORS</a></button>
+        <button onclick="electronics()">ELECTRONICS</button>
+        <button onclick="bedRoom()">BEDROOM</button>
+        <button onclick="livingRoom()">LIVING ROOM</button>
+        <button onclick="colors()">COLORS</button>
     </div>
 <br><br><br>
     <img id="Theme" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQZfSHjqvEZwQyLgnV4IGHCxZvKyiF52huWw&usqp=CAU">
 
 </center>
     </body>
+
+    <style>
+        body {
+    text-align: center;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJIMlwvoqON9GshozGGsszhOsAZl0Ub0a5FA&usqp=CAU");
+}
+
+h1 {
+    height: 100px;  
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThVCguZjtxIlDwmzibxDq9iE4OemMYqf44mA&usqp=CAU") ;
+}
+
+#Theme {
+    height: 300px;
+    width: 900px;
+}
+    </style>
+
+    <script>
+      function electronics() {
+        location.href = "electronics.html";
+      }
+    </script>
 </html>
