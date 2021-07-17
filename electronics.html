@@ -1,4 +1,4 @@
-<html>
+html>
 <head>
 
 	<title>ELECTRONICS</title>
@@ -54,6 +54,7 @@ border-radius: 10px;
 <script>
     img = "";
 status = "";
+objects = [];
 
 function preload(){
   img = loadImage('electronics.jpg');
@@ -78,22 +79,25 @@ function gotResult(error, results) {
     console.log(error);
   }
   console.log(results);
+  objects = results;
 }
 
 
 function draw() {
   image(img, 0, 0, 640, 420);
-  fill("orange");
-  text("LAPTOP", 120, 120);
-  noFill();
-  stroke("orange");
-  rect(120, 125, 150, 100 );
-
-  fill("yellow");
-  text("PRINTER", 420, 200);
-  noFill();
-  stroke("yellow");
-  rect(355, 180, 180, 100);
+  
+  if(status != "") {
+    for(i = 0; i < objects.lenght; i++) {
+      document.getElementById("status").innerHTML = "Status : Object Detected !";
+      
+      fill("blue");
+      percent = floor(objects[i].confidence * 100);
+      text(objects[i].label + "" + "%" , objects[i].x + 15, objects[i].y + 15);
+      noFill();
+      stroke("blue");
+      rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
+    }
+  }
 }
 </script>
 
